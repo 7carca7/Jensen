@@ -1,5 +1,3 @@
-#/srv/docker/containers/
-
 services:
   portainer:
     image: portainer/portainer-ce
