@@ -29,8 +29,8 @@ usermod -aG docker "$USER"
 systemctl enable docker.service
 systemctl enable containerd.service
 
-# Run docker-compose to start the services
-docker-compose up -d
+# Run docker compose to start the services
+docker compose up -d
 
 # Install NFS
 apt install -y nfs-kernel-server
