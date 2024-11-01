@@ -5,8 +5,8 @@ sed -i "s/^#HandleLidSwitch=.*/HandleLidSwitch=ignore/" /etc/systemd/logind.conf
 systemctl restart systemd-logind
 
 # Update APT
-apt-get update
-apt-get install -y ca-certificates curl
+apt update
+apt install -y ca-certificates curl
 
 # Add the official Docker GPG key
 install -m 0755 -d /etc/apt/keyrings
@@ -17,9 +17,8 @@ chmod a+r /etc/apt/keyrings/docker.asc
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Update repositories and install Docker
-apt-get update
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# Install Docker
+apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Create Docker Group and add current user
 groupadd docker
