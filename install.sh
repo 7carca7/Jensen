@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Disable laptop lock by closing the lid
-sed -i 's/^#HandleLidSwitch=.*/HandleLidSwitch=ignore/' /etc/systemd/logind.conf
+sed -i "s/^#HandleLidSwitch=.*/HandleLidSwitch=ignore/" /etc/systemd/logind.conf
 systemctl restart systemd-logind
 
 # Update APT
@@ -38,7 +38,7 @@ apt install -y nfs-kernel-server
 # # Create directory to share "nfs_share"
 mkdir -p /srv/nfs_share
 chown -R nobody:nogroup /srv/nfs_share
-chmod -R 777 /srv/nfs_share
+chmod -R 640 /srv/nfs_share
 
 # Configure exports for NFS
 echo "/srv/nfs_share  192.168.0.0/24(rw,sync,no_subtree_check)" >> /etc/exports
