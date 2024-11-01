@@ -30,8 +30,8 @@ services:
       - /srv/docker/containers/adguardhome/data:/opt/adguardhome/work
       - /srv/docker/containers/adguardhome/config:/opt/adguardhome/conf
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "5353:53/tcp"
+      - "5353:53/udp"
       - "67:67/udp"
       - "6868:68/udp"
       - "80:80/tcp"
