@@ -1,4 +1,4 @@
-# Komvuxarbete-Jensen
+# Jensen
 
 This repository contains an automation script designed to set up an Ubuntu server environment. It simplifies the installation and configuration of Docker, NFS, and related services, making it easy to deploy a functional, scalable server setup with minimal manual intervention.
 
@@ -18,7 +18,7 @@ This repository contains an automation script designed to set up an Ubuntu serve
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/7carca7/Komvuxarbete-Jensen.git
+   git clone https://github.com/7carca7/Jensen.git
    cd Komvuxarbete-Jensen
 
 2. **Run the setup script: Execute the script as root to begin the installation and configuration:**:
