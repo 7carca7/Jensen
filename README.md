@@ -19,7 +19,7 @@ This repository contains an automation script designed to set up an Ubuntu serve
 1. **Clone this repository**:
    ```bash
    git clone https://github.com/7carca7/Jensen.git
-   cd Komvuxarbete-Jensen
+   cd Jensen
 
 2. **Run the setup script: Execute the script as root to begin the installation and configuration:**:
    ```bash
